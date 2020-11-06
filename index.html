@@ -1,0 +1,231 @@
+<html>
+
+<head>
+    <title>Submission</title>
+    <link rel="icon" href="Images/icon.png">
+    <link rel="stylesheet" type="text/css" href="index_style.css">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+</head>
+
+<body>
+
+    <div id="alert" class="alert">
+        Incorect number format. Please try again.
+    </div>
+
+    <h1 class="title">Please enter your phone number.</h1>
+    <input class="number" type="number" id="number">
+    <div class="glass"></div>
+
+    <!--Panel-->
+    <div class="panel" id="panel_prim">
+        <span class="butt" onclick="actDiv1()">
+            <p class="nr">1</p>
+        </span>
+        <span class="butt" onclick="actDiv2()">
+            <p class="nr">2</p>
+        </span>
+        <span class="butt" onclick="actDiv3()">
+            <p class="nr">3</p>
+        </span>
+        <span class="butt" onclick="actDiv4()">
+            <p class="nr">4</p>
+        </span>
+        <span class="butt" onclick="actDiv5()">
+            <p class="nr">5</p>
+        </span>
+        <span class="butt" onclick="actDiv6()">
+            <p class="nr">6</p>
+        </span>
+        <span class="butt" onclick="actDiv7()">
+            <p class="nr">7</p>
+        </span>
+        <span class="butt" onclick="actDiv8()">
+            <p class="nr">8</p>
+        </span>
+        <span class="butt" onclick="actDiv9()">
+            <p class="nr">9</p>
+        </span>
+        <span class="butt" onclick="actDiv0()">
+            <p class="nr">0</p>
+        </span>
+        <button type="submit" value="Submit" onclick="refreshPage()" id="submit">Submit</button>
+    </div>
+
+    <!--Buttons-->
+
+    <div id="btn1" class="check" style="top: 30px; left: 45px;">
+        <input type="radio" onclick="showBtn2()" name="Choose1">
+        <label class="button" id="btn1-1" for="btn1"><i class='icon-off'></i></label>
+    </div>
+    <div id="btn2" class="check" style="top: 500px; left: 1100px;">
+        <input type="radio" onclick="showBtn3()" name="Choose2">
+        <label class="button" id="btn2-1" for="btn2"><i class='icon-off'></i></label>
+    </div>
+    <div id="btn3" class="check" style="top: 570px; left: 500px;">
+        <input type="radio" onclick="showBtn4()" name="Choose3">
+        <label class="button" id="btn3-1" for="btn3"><i class='icon-off'></i></label>
+    </div>
+    <div id="btn4" class="check" style="top: 460px; left: 150px;">
+        <input type="radio" onclick="finish4()" onclick="resetRadio(this)" name="Choose4">
+        <label class="button" id="btn4-1" for="btn4"><i class='icon-off'></i></label>
+    </div>
+
+    <!--Lvl Button-->
+
+    <span class="switch" id="switch">
+        <span class="switch-border1">
+            <span class="switch-border2">
+                <input id="switch2" type="radio" name="switchtb" onclick="finish1()" />
+                <label for="switch2"></label>
+                <span class="switch-top"></span>
+                <span class="switch-shadow"></span>
+                <span class="switch-handle"></span>
+                <span class="switch-handle-left"></span>
+                <span class="switch-handle-right"></span>
+                <span class="switch-handle-top"></span>
+                <span class="switch-handle-bottom"></span>
+                <span class="switch-handle-base"></span>
+                <span class="switch-led switch-led-green">
+                    <span class="switch-led-border">
+                        <span class="switch-led-light">
+                            <span class="switch-led-glow"></span>
+                        </span>
+                    </span>
+                </span>
+                <span class="switch-led switch-led-red">
+                    <span class="switch-led-border">
+                        <span class="switch-led-light">
+                            <span class="switch-led-glow"></span>
+                        </span>
+                    </span>
+                </span>
+            </span>
+        </span>
+    </span>
+
+    <!--Play Box-->
+    <button class="playBox" id="playBox" style="animation-name: example; top:50px; left: 40px;" onclick="fct2()">Click
+        me!</button>
+    <button class="playBox" id="playBox2" style="animation-name: example2;" onclick="fct1()">Click me!</button>
+
+    <!--Trivia-->
+    <div class="trivia_panel" id="trivia">
+        <div class="question" id="q1">
+            <h2>What is wrong with this code?</h2>
+            <img class="prob" src="Images/prob1.png">
+            <div class="options">
+                <input type="radio" name="option" value="false" id="opt1">String variables can not increase their
+                values.</input><br>
+                <input type="radio" name="option" value="false" id="opt2">You can not divide a String
+                variable.</input><br>
+                <input type="radio" name="option" value="false" id="opt3">You can not divide a variable by
+                0.</input><br>
+                <input type="radio" name="option" value="true" id="opt4">All of above.</input>
+                <input type="submit" class="submit_btn" style=" bottom: 22%;
+                right: -50%;" onclick="submitChoice()">
+            </div>
+        </div>
+
+        <div class="question" id="q2">
+            <h2>What does result after executing this code?</h2>
+            <img class="prob" src="Images/prob2.png">
+            <div class="options">
+                <input type="radio" name="option" value="false" id="opt1_2">0.</input><br>
+                <input type="radio" name="option" value="true" id="opt2_2">Floating point exception (core
+                dumped).</input><br>
+                <input type="radio" name="option" value="false_special" id="opt3_2">WHY WOULD YOU DIVIDE SOMETHING BY
+                0?</input><br>
+                <input type="radio" name="option" value="false" id="opt4_2">You can not divide a variable by
+                0.</input>
+                <input type="submit" class="submit_btn" style=" bottom: 22%;
+                    right: -35%;" onclick="submitChoice2()">
+            </div>
+        </div>
+
+    </div>
+    <img id="meme" class="meme" src="Images/meme.jpg">
+    <div id="wrongChoice" class="wrongChoice">Your answer is incorrect!</div>
+    <img id="meme2" class="meme" src="Images/putin.jpg">
+    <div id="rightChoice" class="rightChoice">Nice!</div>
+
+    <!--Big red button-->
+    <div class="select-button" onclick="countClicks()" id="bigred">
+        <div class="textbtn">Click me!</div>
+
+        <div id="coord" class="coord">0 clicks</div>
+    </div>
+
+
+    <!--Slider-->
+    <div id="sliderdiv" class="sliderye">
+        <div class="slidercont">
+            <input type="range" min="-90" max="90" value="0" class="slider" id="range1" style="top:220px;">
+            <span id="val1" class="value" style="top:240px"></span>
+        </div>
+        <div class="slidercont">
+            <input type="range" min="-90" max="90" value="0" class="slider" id="range2" style="top:280px;">
+            <span id="val2" class="value" style="top:300px"></span>
+        </div>
+        <div class="slidercont">
+            <input type="range" min="-45" max="45" value="0" class="slider" id="range3" style="top:340px;">
+            <span id="val3" class="value" style="top:360px"></span>
+        </div>
+
+        <div>
+            <div class="base"></div>
+            <div class="robo_base"></div>
+            <div id="hand1" style="z-index: 1;width: 30px; height: 160px; position: absolute;top: 440px; left: 170px;">
+                <div class="robo_hand">
+                    <div id="hand2" style="z-index: -1;width: 28px; height: 120px;position: relative; top:-50px;">
+                        <div class="robo_hand2">
+                            <div id="hand3" style="width: 28px; height: 100px;position: relative; top:-50px;">
+                                <img src="Images/hand.png" id="finger"></img>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="Images/dot.png" id="trg"></img>
+
+    <!--Collect the dots-->
+    <div id="collect_dots" class="collect_dot">
+        <img id="dot1" style="top: 50px; left: 60px;" class="dot" src="Images/plus.png" onclick="removeDiv1()">
+        <img id="dot2" style="top: 500px; left: 120px;" class="dot" src="Images/plus2.png" onclick="removeDiv2()">
+        <img id="dot3" style="top: 100px; left: 900px;" class="dot" src="Images/plus2.png" onclick="removeDiv3()">
+        <img id="dot4" style="top: 600px; left: 700px;" class="dot" src="Images/plus2.png" onclick="removeDiv4()">
+        <img id="dot5" style="top: 350px; left: 1100px;" class="dot" src="Images/plus.png" onclick="removeDiv5()">
+        <img id="dot6" style="top: 220px; left: 290px;" class="dot" src="Images/plus.png" onclick="removeDiv6()">
+    </div>
+    <!--Code-->
+    <div id="panel_code" class="code_panel">
+        <div class="code_title">Insert your 7 digit code:</div>
+        <input type="text" class="code_text" id="code_input" maxlength="7">
+        <div class="code_info">*Please visit <a href="code.html" target="_blank">codegenerator</a> to get your exclusive code!
+        </div>
+        <div class="code_info" style="top:88%">*The functionality of the code is not guaranteed.</div>
+        <button class="submit_code" onclick="clickCode()">Submit</button>
+    </div>
+    <!--Riddle-->
+    <div id="panel_riddle" class="code_panel">
+        <div class="title_riddle">Riddle</div>
+        <div class="riddle">What is the weirdest programing language,<br>
+        Which is useful in just one domain,<br>
+        And nobody likes using it?</div>
+        <input type="text" class="riddle_text" id="riddle_input" maxlength="20">
+        <button class="submit_riddle" onclick="clickRiddle()">Submit</button>
+    </div>
+    <!--Media-->
+    <a href="https://www.reddit.com/r/ProgrammerHumor" target="_blank"><img src="Images/reddit2.png" class="reddit"></a>
+    <a href="https://discord.gg/ph" target="_blank"><img src="Images/discord.png" class="discord"></a>
+    <a href="https://www.programmerhumor.org/Hackathon" target="_blank"><img src="Images/prog.png" class="prog"></a>
+    <a href="https://www.twitch.tv/programmerhumor" target="_blank"><img src="Images/twitch.png" class="twitch"></a>
+</body>
+
+</html>
+
+<script src="index_script.js"></script>
